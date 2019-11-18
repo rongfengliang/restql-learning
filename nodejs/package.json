@@ -1,0 +1,12 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "@b2wdigital/restql": "^0.1.5"
+  },
+  "scripts": {
+    "app":"node app.js"
+  }
+}

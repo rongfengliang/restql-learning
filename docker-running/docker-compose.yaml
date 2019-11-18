@@ -1,0 +1,19 @@
+version: '3'
+services:
+  restql-api:
+    image: b2wdigital/restql-http:latest
+    ports:
+      - "9000:9000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/restql
+  restql-manager:
+    image: b2wdigital/restql-manager:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/restql
+      - RESTQL_SERVER_URL=http://restql-api:9000
+  mongodb:
+    image: mongo:latest
+    ports: 
+    - "27017:27017"
